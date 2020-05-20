@@ -6,18 +6,6 @@ const typeDefs = require('./graphql/typeDefs')
 const Post = require('./models/Post')
 const { MONGODB } = require('./config.js')
 
-const resolvers = {
-  Query: {
-    async getPosts() {
-      try {
-        const posts = await Post.find()
-        return posts
-      } catch (err) {
-        throw new Error(err)
-      }
-    },
-  },
-}
 
 const server = new ApolloServer({
   typeDefs,
