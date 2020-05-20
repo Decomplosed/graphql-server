@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
+const {SECRET_KEY} = require('../../config')
 const User = require('../../models/User')
 
 module.export = {
