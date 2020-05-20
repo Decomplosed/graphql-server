@@ -23,6 +23,8 @@ module.export = {
         password,
         createdAt: new Date().toISOString()
       })
+
+      const res = await newUser.save()
     },
   },
 }
