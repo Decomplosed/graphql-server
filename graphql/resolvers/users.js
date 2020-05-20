@@ -15,6 +15,7 @@ module.export = {
       // TODO: Make sure user doesnt already exist
       // TODO: hash password
       // TODO: create auth token
+      password = await bcrypt.hash(password, 12)
     },
   },
 }
