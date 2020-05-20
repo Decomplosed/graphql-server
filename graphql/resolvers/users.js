@@ -32,6 +32,12 @@ module.export = {
         email: res.email,
         username: res.username
       }, SECRET_KEY, {expiresIn: '1h'})
+
+      return {
+        ...res._doc,
+        id: res._id,
+        token
+      }
     },
   },
 }
