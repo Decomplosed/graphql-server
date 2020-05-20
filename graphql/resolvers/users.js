@@ -26,6 +26,12 @@ module.export = {
       })
 
       const res = await newUser.save()
+
+      const token = jwt.sign({
+        id: res.id,
+        email: res.email,
+        username: res.username
+      }, SECRET_KEY, {expiresIn: '1h'})
     },
   },
 }
