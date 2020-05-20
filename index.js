@@ -3,9 +3,8 @@ const gql = require('graphql-tag')
 const mongoose = require('mongoose')
 
 const typeDefs = require('./graphql/typeDefs')
-const Post = require('./models/Post')
+const resolvers = require('./graphql/resolvers')
 const { MONGODB } = require('./config.js')
-
 
 const server = new ApolloServer({
   typeDefs,
