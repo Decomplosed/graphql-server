@@ -7,6 +7,12 @@ module.exports = gql`
     createdAt: String!
     username: String!
   }
+  type RegisterInput{
+    username: String!
+    password: String!
+    confirmPassword: String!
+    email: String!
+  }
   type Query {
     getPosts: [Post]
   }
