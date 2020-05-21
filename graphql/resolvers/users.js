@@ -15,8 +15,10 @@ module.export = {
     ) {
       // TODO: validate user data
       // TODO: Make sure user doesnt already exist
-      // TODO: hash password
       // TODO: create auth token
+
+      const user = await User.findOne({ username })
+
       password = await bcrypt.hash(password, 12)
 
       const newUser = new User({
