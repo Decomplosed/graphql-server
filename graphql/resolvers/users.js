@@ -19,6 +19,8 @@ module.export = {
         errors.general = 'User not found'
         throw new UserInputError('Wrong credentials', { errors })
       }
+
+      const match = await bcrypt.compare(password, user.password)
     },
 
     async register(
