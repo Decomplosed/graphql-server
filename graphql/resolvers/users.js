@@ -18,6 +18,13 @@ module.export = {
       // TODO: Make sure user doesnt already exist
       // TODO: create auth token
 
+      const { valid, errors } = validateRegisterInput(
+        username,
+        email,
+        password,
+        confirmPassword
+      )
+
       const user = await User.findOne({ username })
 
       if (user) {
