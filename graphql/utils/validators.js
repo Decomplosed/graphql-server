@@ -19,4 +19,8 @@ module.exports.validateRegisterInput = (
       errors.email = 'Email must be a valid email address'
     }
   }
+
+  if (password.trim() === '') {
+    errors.password = 'Password must not be empty'
+  }
 }
