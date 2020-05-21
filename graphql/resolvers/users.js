@@ -39,6 +39,12 @@ module.export = {
       }
 
       const token = generateToken(user)
+
+      return {
+        ...user._doc,
+        id: user._id,
+        token,
+      }
     },
 
     async register(
