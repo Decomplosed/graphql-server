@@ -19,6 +19,14 @@ module.export = {
 
       const user = await User.findOne({ username })
 
+      if (user) {
+        throw new UserInputError('Username is already taken', {
+          errors: {
+            username: 'This username is already taken',
+          },
+        })
+      }
+
       password = await bcrypt.hash(password, 12)
 
       const newUser = new User({
