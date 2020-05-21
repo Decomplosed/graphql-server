@@ -11,6 +11,10 @@ const User = require('../../models/User')
 
 module.export = {
   Mutation: {
+    async login(_, { username, password }) {
+      const { errors, valid } = validateLoginInput(username, password)
+    },
+
     async register(
       _,
       { registerInput: { username, email, password, confirmPassword } },
