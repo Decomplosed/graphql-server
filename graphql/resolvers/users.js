@@ -38,7 +38,7 @@ module.export = {
         throw new UserInputError('Wrong credentials', { errors })
       }
 
-      const token =
+      const token = generateToken(user)
     },
 
     async register(
