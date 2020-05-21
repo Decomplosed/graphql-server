@@ -83,7 +83,7 @@ module.export = {
 
       const res = await newUser.save()
 
-      const token =
+      const token = generateToken(res)
 
       return {
         ...res._doc,
