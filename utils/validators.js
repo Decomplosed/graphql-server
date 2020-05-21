@@ -31,3 +31,5 @@ module.exports.validateRegisterInput = (
     valid: Object.keys(errors).length < 1,
   }
 }
+
+module.exports.validateLoginInput = (username, password) => {}
