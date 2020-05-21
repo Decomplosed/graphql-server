@@ -58,10 +58,6 @@ module.export = {
       context,
       info
     ) {
-      // TODO: validate user data
-      // TODO: Make sure user doesnt already exist
-      // TODO: create auth token
-
       const { valid, errors } = validateRegisterInput(
         username,
         email,
