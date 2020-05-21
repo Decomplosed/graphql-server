@@ -9,6 +9,18 @@ const {
 const { SECRET_KEY } = require('../../config')
 const User = require('../../models/User')
 
+function generateToken(user) {
+  return jwt.sign(
+    {
+      id: user.id,
+      email: user.email,
+      username: user.username,
+    },
+    SECRET_KEY,
+    { expiresIn: '1h' }
+  )
+}
+
 module.export = {
   Mutation: {
     async login(_, { username, password }) {
@@ -17,10 +29,16 @@ module.export = {
 
       if (!user) {
         errors.general = 'User not found'
-        throw new UserInputError('Wrong credentials', { errors })
+        throw new UserInputError('User not found', { errors })
       }
 
       const match = await bcrypt.compare(password, user.password)
+      if (!match) {
+        errors.general = 'Wrong credentials'
+        throw new UserInputError('Wrong credentials', { errors })
+      }
+
+      const token =
     },
 
     async register(
@@ -65,15 +83,7 @@ module.export = {
 
       const res = await newUser.save()
 
-      const token = jwt.sign(
-        {
-          id: res.id,
-          email: res.email,
-          username: res.username,
-        },
-        SECRET_KEY,
-        { expiresIn: '1h' }
-      )
+      const token =
 
       return {
         ...res._doc,
