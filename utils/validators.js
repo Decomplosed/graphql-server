@@ -32,4 +32,6 @@ module.exports.validateRegisterInput = (
   }
 }
 
-module.exports.validateLoginInput = (username, password) => {}
+module.exports.validateLoginInput = (username, password) => {
+  const errors = {}
+}
