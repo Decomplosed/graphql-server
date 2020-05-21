@@ -14,6 +14,11 @@ module.export = {
     async login(_, { username, password }) {
       const { errors, valid } = validateLoginInput(username, password)
       const user = await User.findOne({ username })
+
+      if (!user) {
+        errors.general = 'User not found'
+        throw new UserInputError('Wrong credentials', { errors })
+      }
     },
 
     async register(
