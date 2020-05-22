@@ -41,6 +41,10 @@ module.exports = {
     },
     async deletePost(_, { postId }, context) {
       const user = checkAtuh(context)
+
+      try {
+        const post = await Post.findById(postId)
+      } catch (err) {}
     },
   },
 }
