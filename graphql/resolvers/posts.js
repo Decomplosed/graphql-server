@@ -39,6 +39,8 @@ module.exports = {
 
       return post
     },
-    async deletePost(_, { postId }, context) {},
+    async deletePost(_, { postId }, context) {
+      const user = checkAtuh(context)
+    },
   },
 }
