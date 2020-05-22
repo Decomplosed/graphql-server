@@ -1,4 +1,5 @@
 const Post = require('../../models/Post')
+const checkAtuh = require('../../utils/check-auth')
 
 module.exports = {
   Query: {
