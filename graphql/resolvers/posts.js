@@ -50,6 +50,8 @@ module.exports = {
         if (user.username === post.username) {
           await post.delete()
           return 'Post deleted successfully'
+        } else {
+          throw new AuthenticationError('Action not allowed')
         }
       } catch (err) {}
     },
