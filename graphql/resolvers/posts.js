@@ -53,7 +53,9 @@ module.exports = {
         } else {
           throw new AuthenticationError('Action not allowed')
         }
-      } catch (err) {}
+      } catch (err) {
+        throw new Error(err)
+      }
     },
   },
 }
