@@ -39,5 +39,6 @@ module.exports = {
 
       return post
     },
+    async deletePost(_, { postId }, context) {},
   },
 }
