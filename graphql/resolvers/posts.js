@@ -1,5 +1,5 @@
 const Post = require('../../models/Post')
-const checkAtuh = require('../../utils/check-auth')
+const checkAuth = require('../../utils/check-auth')
 
 module.exports = {
   Query: {
@@ -26,7 +26,7 @@ module.exports = {
   },
   Mutation: {
     async createPost(_, { body }, context) {
-      const user = checkAtuh(context)
+      const user = checkAuth(context)
 
       const newPost = new Post({
         body,
@@ -40,7 +40,7 @@ module.exports = {
       return post
     },
     async deletePost(_, { postId }, context) {
-      const user = checkAtuh(context)
+      const user = checkAuth(context)
 
       try {
         const post = await Post.findById(postId)
