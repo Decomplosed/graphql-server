@@ -32,6 +32,10 @@ module.exports = {
       const { username } = checkAuth(context)
 
       const post = await Post.findById(postId)
+
+      if (post) {
+        const commentIndex = post.comments.findIndex((c) => c.id === commentId)
+      }
     },
   },
 }
