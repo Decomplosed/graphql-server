@@ -24,7 +24,7 @@ module.exports = {
         })
         await post.save()
         return post
-      }
+      } else throw new UserInputError('Post not found')
     },
   },
 }
