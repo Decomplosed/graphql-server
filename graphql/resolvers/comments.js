@@ -15,6 +15,14 @@ module.exports = {
       }
 
       const post = Post.findById(postId)
+
+      if (post) {
+        post.comments.unshift({
+          body,
+          username,
+          createdAt: new Date().toISOString(),
+        })
+      }
     },
   },
 }
