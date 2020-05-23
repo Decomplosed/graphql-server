@@ -22,6 +22,8 @@ module.exports = {
           username,
           createdAt: new Date().toISOString(),
         })
+        await post.save()
+        return post
       }
     },
   },
