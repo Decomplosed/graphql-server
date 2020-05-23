@@ -4,7 +4,7 @@ const UserInputError = require('apollo-server')
 module.exports = {
   Mutation: {
     createComment: async (_, { postId, body }, context) => {
-      const user = checkAuth(context)
+      const { username } = checkAuth(context)
 
       if (body.trim() === '') {
         throw new UserInputError('Empty comment', {
