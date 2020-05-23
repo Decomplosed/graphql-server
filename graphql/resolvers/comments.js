@@ -13,6 +13,8 @@ module.exports = {
           },
         })
       }
+
+      const post = Post.findById(postId)
     },
   },
 }
