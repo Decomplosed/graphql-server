@@ -43,6 +43,8 @@ module.exports = {
         } else {
           throw new AuthenticationError('Action not allowed')
         }
+      } else {
+        throw new UserInputError('Post not found')
       }
     },
   },
