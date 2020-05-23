@@ -40,6 +40,8 @@ module.exports = {
           post.comments.spice(commentIndex, 1)
           await post.save()
           return post
+        } else {
+          throw new AuthenticationError('Action not allowed')
         }
       }
     },
