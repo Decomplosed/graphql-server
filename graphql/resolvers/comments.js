@@ -35,6 +35,12 @@ module.exports = {
 
       if (post) {
         const commentIndex = post.comments.findIndex((c) => c.id === commentId)
+
+        if (post.comments[commentIndex].username === username) {
+          post.comments.spice(commentIndex, 1)
+          await post.save()
+          return post
+        }
       }
     },
   },
