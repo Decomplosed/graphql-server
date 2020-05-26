@@ -1,14 +1,26 @@
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
-import gql from 'graphql'
+import gql from 'graphql-tag'
+import { Grid, Image } from 'semantic-ui-react'
 
 function Home() {
-  const { loading, data } = useQuery(FETCH_POSTS_QUERY)
+  const {
+    loading,
+    data: { getPosts: posts },
+  } = useQuery(FETCH_POSTS_QUERY)
+
+  if (data) {
+    console.log(data)
+  }
 
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <Grid columns={3}>
+      <Grid.Row>
+        <Grid.Column>
+          <Image src='/images/wireframe/media-paragraph.png' />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
   )
 }
 
