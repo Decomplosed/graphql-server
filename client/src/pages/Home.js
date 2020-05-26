@@ -15,6 +15,9 @@ function Home() {
 
   return (
     <Grid columns={3}>
+      <Grid.row>
+        <h1>Recent Posts:</h1>
+      </Grid.row>
       <Grid.Row>
         <Grid.Column>
           <Image src='/images/wireframe/media-paragraph.png' />
