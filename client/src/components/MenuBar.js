@@ -4,7 +4,7 @@ import { Menu, Segment } from 'semantic-ui-react'
 function MenuBar() {
   const [activeItem, setActiveItem] = useState('')
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  const handleItemClick = (e, { name }) => setActiveItem(name)
 
   render() {
     const { activeItem } = this.state
