@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
 
 function MenuBar() {
-  state = { activeItem: 'home' }
+  const [activeItem, setActiveItem] = useState('')
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
