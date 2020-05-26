@@ -12,6 +12,7 @@ import MenuBar from './components/MenuBar'
 function App() {
   return (
     <Router>
+      <MenuBar />
       <Route exact path='/' component={Home} />
       <Route exact path='/login' component={Login} />
       <Route exact path='/register' component={Register} />
