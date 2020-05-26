@@ -6,7 +6,6 @@ function MenuBar() {
 
   const handleItemClick = (e, { name }) => setActiveItem(name)
 
-  const { activeItem } = this.state
   return (
     <Menu pointing secondary>
       <Menu.Item
