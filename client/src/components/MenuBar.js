@@ -14,20 +14,15 @@ function MenuBar() {
         active={activeItem === 'home'}
         onClick={handleItemClick}
       />
-      <Menu.Item
-        name='messages'
-        active={activeItem === 'messages'}
-        onClick={handleItemClick}
-      />
-      <Menu.Item
-        name='friends'
-        active={activeItem === 'friends'}
-        onClick={handleItemClick}
-      />
       <Menu.Menu position='right'>
         <Menu.Item
-          name='logout'
-          active={activeItem === 'logout'}
+          name='login'
+          active={activeItem === 'login'}
+          onClick={handleItemClick}
+        />
+        <Menu.Item
+          name='register'
+          active={activeItem === 'register'}
           onClick={handleItemClick}
         />
       </Menu.Menu>
