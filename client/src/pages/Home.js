@@ -9,19 +9,22 @@ function Home() {
     data: { getPosts: posts },
   } = useQuery(FETCH_POSTS_QUERY)
 
-  if (data) {
-    console.log(data)
-  }
-
   return (
     <Grid columns={3}>
       <Grid.row>
         <h1>Recent Posts:</h1>
       </Grid.row>
       <Grid.Row>
-        <Grid.Column>
-          <Image src='/images/wireframe/media-paragraph.png' />
-        </Grid.Column>
+        {loading ? (
+          <h1>Loading Posts...</h1>
+        ) : (
+          posts &&
+          posts.map((post) => (
+            <Grid.column key={post.id}>
+              <PostCard post={post} />
+            </Grid.column>
+          ))
+        )}
       </Grid.Row>
     </Grid>
   )
