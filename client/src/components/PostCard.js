@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, Icon, Label } from 'semantic-ui-react'
+import { Card, Icon, Label, Image, Button } from 'semantic-ui-react'
+import moment from 'moment'
 
 function PostCard({
   props: { id, body, createdAt, username, likeCount, commentCount, likes },
