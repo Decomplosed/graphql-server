@@ -12,23 +12,23 @@ function MenuBar() {
       <Menu.Item
         name='home'
         active={activeItem === 'home'}
-        onClick={this.handleItemClick}
+        onClick={handleItemClick}
       />
       <Menu.Item
         name='messages'
         active={activeItem === 'messages'}
-        onClick={this.handleItemClick}
+        onClick={handleItemClick}
       />
       <Menu.Item
         name='friends'
         active={activeItem === 'friends'}
-        onClick={this.handleItemClick}
+        onClick={handleItemClick}
       />
       <Menu.Menu position='right'>
         <Menu.Item
           name='logout'
           active={activeItem === 'logout'}
-          onClick={this.handleItemClick}
+          onClick={handleItemClick}
         />
       </Menu.Menu>
     </Menu>
