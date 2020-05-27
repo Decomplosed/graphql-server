@@ -3,7 +3,7 @@ import { Card, Icon, Label, Image } from 'semantic-ui-react'
 import moment from 'moment'
 
 function PostCard({
-  props: { id, body, createdAt, username, likeCount, commentCount, likes },
+  post: { id, body, createdAt, username, likeCount, commentCount, likes },
 }) {
   return (
     <Card>
