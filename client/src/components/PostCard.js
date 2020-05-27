@@ -22,12 +22,11 @@ function PostCard({
       </Card.Content>
       <Card.Content extra>
         <Button as='div' labelPosition='right'>
-          <Button color='red'>
+          <Button color='teal'>
             <Icon name='heart' />
-            Like
           </Button>
-          <Label as='a' basic color='red' pointing='left'>
-            2,048
+          <Label basic color='teal' pointing='left'>
+            {likeCount}
           </Label>
         </Button>
       </Card.Content>
