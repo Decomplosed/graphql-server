@@ -6,6 +6,10 @@ import { Link } from 'react-router-dom'
 function PostCard({
   post: { id, body, createdAt, username, likeCount, commentCount, likes },
 }) {
+  function likePost() {
+    console.log('Like post')
+  }
+
   return (
     <Card fluid>
       <Card.Content>
@@ -21,7 +25,7 @@ function PostCard({
         <Card.Description>{body}</Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <Button as='div' labelPosition='right'>
+        <Button as='div' labelPosition='right' onClick={likePost}>
           <Button color='teal' basic>
             <Icon name='heart' />
           </Button>
