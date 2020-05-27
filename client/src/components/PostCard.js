@@ -22,7 +22,7 @@ function PostCard({
       </Card.Content>
       <Card.Content extra>
         <Button as='div' labelPosition='right'>
-          <Button color='teal'>
+          <Button color='teal' basic>
             <Icon name='heart' />
           </Button>
           <Label basic color='teal' pointing='left'>
