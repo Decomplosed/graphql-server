@@ -22,7 +22,7 @@ function Home() {
         ) : (
           posts &&
           posts.map((post) => (
-            <Grid.column key={post.id}>
+            <Grid.column key={post.id} style={{ marginBottom: 20 }}>
               <PostCard post={post} />
             </Grid.column>
           ))
