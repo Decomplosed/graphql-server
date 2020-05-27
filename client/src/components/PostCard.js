@@ -6,7 +6,7 @@ function PostCard({
   post: { id, body, createdAt, username, likeCount, commentCount, likes },
 }) {
   return (
-    <Card>
+    <Card fluid>
       <Card.Content>
         <Image
           floated='right'
