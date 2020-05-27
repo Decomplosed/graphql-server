@@ -1,4 +1,4 @@
-const { AuthenticationError } = require('apollo-server')
+const { AuthenticationError, UserInputError } = require('apollo-server')
 
 const Post = require('../../models/Post')
 const checkAuth = require('../../utils/check-auth')
@@ -30,7 +30,7 @@ module.exports = {
     async createPost(_, { body }, context) {
       const user = checkAuth(context)
 
-      if (args.body.trim() === '') {
+      if (body.trim() === '') {
         throw new Error('Post body must not be empty')
       }
 
@@ -43,7 +43,9 @@ module.exports = {
 
       const post = await newPost.save()
 
-      context.pubsub.publish('NEW_POST', { newPost: post })
+      context.pubsub.publish('NEW_POST', {
+        newPost: post,
+      })
 
       return post
     },
@@ -52,7 +54,6 @@ module.exports = {
 
       try {
         const post = await Post.findById(postId)
-
         if (user.username === post.username) {
           await post.delete()
           return 'Post deleted successfully'
