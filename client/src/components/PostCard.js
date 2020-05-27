@@ -10,6 +10,10 @@ function PostCard({
     console.log('Like post')
   }
 
+  function commentOnPost() {
+    console.log('Comment post')
+  }
+
   return (
     <Card fluid>
       <Card.Content>
