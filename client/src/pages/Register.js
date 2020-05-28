@@ -8,6 +8,11 @@ function Register() {
     password: '',
     confirmPassword: '',
   })
+
+  const onChange = (event) => {
+    setValues({ ...values, [event.target.name]: [event.target.value] })
+  }
+
   return (
     <div>
       <Form onSubmit={onSubmit} noValidate>
