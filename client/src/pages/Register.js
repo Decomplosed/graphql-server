@@ -4,7 +4,15 @@ import { Form } from 'semantic-ui-react'
 function Register() {
   return (
     <div>
-      <h1>Register</h1>
+      <Form onSubmit={onSubmit} noValidate>
+        <h1>Register</h1>
+        <Form.Input
+          label='Username'
+          placeholder='Username...'
+          name='username'
+          value={}
+        />
+      </Form>
     </div>
   )
 }
