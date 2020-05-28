@@ -16,7 +16,8 @@ function Register() {
           label='Username'
           placeholder='Username...'
           name='username'
-          value={}
+          value={values.username}
+          onChange={onChange}
         />
       </Form>
     </div>
