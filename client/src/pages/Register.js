@@ -15,16 +15,17 @@ function Register() {
     setValues({ ...values, [event.target.name]: [event.target.value] })
   }
 
-  const onSubmit = (event) => {
-    event.preventDefault()
-  }
-
   const [addUser, { loading }] = useMutation(REGISTER_USER, {
     update(proxy, result) {
       console.log(result)
     },
     variables: values,
   })
+
+  const onSubmit = (event) => {
+    event.preventDefault()
+    addUser()
+  }
 
   return (
     <div>
