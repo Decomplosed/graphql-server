@@ -19,6 +19,27 @@ function Register() {
           value={values.username}
           onChange={onChange}
         />
+        <Form.Input
+          label='Email'
+          placeholder='Email...'
+          name='email'
+          value={values.email}
+          onChange={onChange}
+        />
+        <Form.Input
+          label='Password'
+          placeholder='Password...'
+          name='password'
+          value={values.password}
+          onChange={onChange}
+        />
+        <Form.Input
+          label='Confirm Password'
+          placeholder='Confirm Password...'
+          name='confirmPassword'
+          value={values.confirmPassword}
+          onChange={onChange}
+        />
       </Form>
     </div>
   )
