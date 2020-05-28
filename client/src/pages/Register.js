@@ -13,6 +13,10 @@ function Register() {
     setValues({ ...values, [event.target.name]: [event.target.value] })
   }
 
+  const onSubmit = (event) => {
+    event.preventDefault()
+  }
+
   return (
     <div>
       <Form onSubmit={onSubmit} noValidate>
