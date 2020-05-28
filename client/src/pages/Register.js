@@ -40,6 +40,9 @@ function Register() {
           value={values.confirmPassword}
           onChange={onChange}
         />
+        <Button type='submit' primary>
+          Register
+        </Button>
       </Form>
     </div>
   )
