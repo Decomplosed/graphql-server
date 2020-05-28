@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'semantic-ui-react'
+import gql from 'graphql-tag'
 
 function Register() {
   const [values, setValues] = useState({
