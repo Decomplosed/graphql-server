@@ -19,6 +19,13 @@ function Register() {
     event.preventDefault()
   }
 
+  const [addUser, { loading }] = useMutation(REGISTER_USER, {
+    update(proxy, result) {
+      console.log(result)
+    },
+    variables: values,
+  })
+
   return (
     <div>
       <Form onSubmit={onSubmit} noValidate>
