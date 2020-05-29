@@ -30,22 +30,13 @@ function Login(props) {
   return (
     <div className='form-container'>
       <Form onSubmit={onSubmit} noValidate className={loading ? 'loading' : ''}>
-        <h1>Register</h1>
+        <h1>Login</h1>
         <Form.Input
           label='Username'
           placeholder='Username...'
           name='username'
           value={values.username}
           error={errors.username ? true : false}
-          onChange={onChange}
-        />
-        <Form.Input
-          label='Email'
-          placeholder='Email...'
-          name='email'
-          type='email'
-          value={values.email}
-          error={errors.email ? true : false}
           onChange={onChange}
         />
         <Form.Input
@@ -57,17 +48,8 @@ function Login(props) {
           error={errors.password ? true : false}
           onChange={onChange}
         />
-        <Form.Input
-          label='Confirm Password'
-          placeholder='Confirm Password...'
-          name='confirmPassword'
-          type='password'
-          value={values.confirmPassword}
-          error={errors.confirmPassword ? true : false}
-          onChange={onChange}
-        />
         <Button type='submit' primary>
-          Register
+          Login
         </Button>
       </Form>
       {Object.keys(errors).length > 0 && (
