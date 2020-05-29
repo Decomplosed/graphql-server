@@ -1,2 +1,7 @@
-import React from 'react'
+import React, { createContext } from 'react'
 
+const AuthContext = createContext({
+  user: null,
+  login: (data) => {},
+  logout: () => {},
+})
