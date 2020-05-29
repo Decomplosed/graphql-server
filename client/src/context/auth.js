@@ -24,7 +24,7 @@ function authReducer(state, action) {
   }
 }
 
-function authProvider(props) {
+function AuthProvider(props) {
   const [state, dispatch] = useReducer(authReducer, { user: null })
 
   function login(userData) {
@@ -47,3 +47,5 @@ function authProvider(props) {
     />
   )
 }
+
+export { AuthContext, AuthProvider }
