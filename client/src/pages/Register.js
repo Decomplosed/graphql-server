@@ -12,7 +12,7 @@ function Register() {
   })
 
   const onChange = (event) => {
-    setValues({ ...values, [event.target.name]: [event.target.value] })
+    setValues({ ...values, [event.target.name]: event.target.value })
   }
 
   const [addUser, { loading }] = useMutation(REGISTER_USER, {
