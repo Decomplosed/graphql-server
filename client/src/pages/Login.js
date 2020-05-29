@@ -83,7 +83,7 @@ function Login(props) {
   )
 }
 
-const REGISTER_USER = gql`
+const LOGIN_USER = gql`
   mutation register(
     $username: String!
     $email: String!
@@ -107,4 +107,4 @@ const REGISTER_USER = gql`
   }
 `
 
-export default Register
+export default Login
