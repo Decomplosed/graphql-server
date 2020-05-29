@@ -20,6 +20,9 @@ function Register() {
     update(proxy, result) {
       console.log(result)
     },
+    onError(err) {
+      setErrors(err.graphQLErrors[0].extensions.exception.errors)
+    },
     variables: values,
   })
 
