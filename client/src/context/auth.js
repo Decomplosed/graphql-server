@@ -23,3 +23,7 @@ function authReducer(state, action) {
       return state
   }
 }
+
+function authProvider(props) {
+  const [state, dispatch] = useReducer(authReducer, { user: null })
+}
