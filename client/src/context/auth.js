@@ -33,4 +33,10 @@ function authProvider(props) {
       payload: userData,
     })
   }
+
+  function logout() {
+    dispatch({
+      type: 'LOGOUT',
+    })
+  }
 }
