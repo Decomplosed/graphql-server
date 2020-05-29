@@ -6,4 +6,9 @@ const AuthContext = createContext({
   logout: () => {},
 })
 
-function authReducer(state, action) {}
+function authReducer(state, action) {
+  switch (action.type) {
+    default:
+      return state
+  }
+}
