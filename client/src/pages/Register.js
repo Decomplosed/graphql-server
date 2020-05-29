@@ -71,6 +71,15 @@ function Register() {
           Register
         </Button>
       </Form>
+      <div className='ui error message'>
+        {Object.keys(errors).length > 0 && (
+          <ul className='list'>
+            {Object.values(errors).map((value) => (
+              <li key={value}>{value}</li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   )
 }
