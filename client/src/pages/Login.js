@@ -3,6 +3,8 @@ import { Form, Button } from 'semantic-ui-react'
 import { useMutation } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 
+import { useForm } from '../utils/hooks'
+
 function Register(props) {
   const [errors, setErrors] = useState({})
   const [values, setValues] = useState({
