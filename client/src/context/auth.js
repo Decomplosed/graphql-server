@@ -5,3 +5,5 @@ const AuthContext = createContext({
   login: (data) => {},
   logout: () => {},
 })
+
+function authReducer(state, action) {}
