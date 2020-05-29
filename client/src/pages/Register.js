@@ -4,6 +4,7 @@ import { useMutation } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 
 function Register() {
+  const [errors, setErrors] = useState({})
   const [values, setValues] = useState({
     username: '',
     email: '',
