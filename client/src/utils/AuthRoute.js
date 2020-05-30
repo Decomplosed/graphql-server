@@ -15,3 +15,5 @@ function AuthRoute({ component: Component, ...rest }) {
     />
   )
 }
+
+export default AuthRoute
