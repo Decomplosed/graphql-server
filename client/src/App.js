@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 import './App.css'
 
 import { AuthProvider } from './context/auth'
+import AuthRoute from './utils/hooks'
 
 import Home from './pages/Home'
 import Login from './pages/Login'
