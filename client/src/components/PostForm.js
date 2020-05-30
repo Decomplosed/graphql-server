@@ -13,7 +13,7 @@ function PostForm() {
           placeholder='Hi World!'
           name='body'
           onChange={onChange}
-          value={ValuesOfCorrectTypeRule.body}
+          value={values.body}
         />
         <Button type='submit' color='teal'>
           Submit
