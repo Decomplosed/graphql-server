@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
+import { AuthContext } from '../context/auth'
+
 function MenuBar() {
   const pathname = window.location.pathname
   const path = pathname === '/' ? 'home' : pathname.substr(1)
