@@ -47,6 +47,8 @@ function MenuBar() {
       </Menu.Menu>
     </Menu>
   )
+
+  return menuBar
 }
 
 export default MenuBar
