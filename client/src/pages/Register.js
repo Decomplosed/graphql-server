@@ -18,8 +18,8 @@ function Register(props) {
   })
 
   const [addUser, { loading }] = useMutation(REGISTER_USER, {
-    update(_, result) {
-      console.log(result)
+    update(_, { data: { register: userData } }) {
+      context.login(userData)
       props.history.push('/')
     },
     onError(err) {
