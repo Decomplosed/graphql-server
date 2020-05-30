@@ -22,6 +22,11 @@ function Home() {
       <Grid.Row className='page-title' centered>
         <h1>Recent Posts</h1>
       </Grid.Row>
+      {user && (
+        <Grid.Column>
+          <PostForm />
+        </Grid.Column>
+      )}
       {loading ? (
         <h1>Loading posts..</h1>
       ) : (
