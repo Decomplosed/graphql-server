@@ -1,10 +1,13 @@
 import React from 'react'
-import { Form } from 'semantic-ui-react'
+import { Form, Button } from 'semantic-ui-react'
 
 import { useForm } from '../utils/hooks'
-import { ValuesOfCorrectTypeRule } from 'graphql'
 
 function PostForm() {
+  const { values, onChange, onSubmit } = useForm(createPostCallback, {
+    body: '',
+  })
+
   return (
     <Form onSubmit={onSubmit}>
       <h2>Create a Post:</h2>
