@@ -7,6 +7,8 @@ import { AuthContext } from '../context/auth'
 import PostCard from '../components/PostCard'
 
 function Home() {
+  const { user } = useContext(AuthContext)
+
   let posts = ''
   const { loading, data } = useQuery(FETCH_POSTS_QUERY)
 
