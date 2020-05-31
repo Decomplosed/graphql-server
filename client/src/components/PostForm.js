@@ -39,6 +39,7 @@ function PostForm() {
             name='body'
             onChange={onChange}
             value={values.body}
+            error={error ? true : false}
           />
           <Button type='submit' color='teal'>
             Submit
