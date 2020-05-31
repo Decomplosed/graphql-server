@@ -10,6 +10,14 @@ function PostForm() {
     body: '',
   })
 
+  const [createPost, { error }] = useMutation(CREATE_POST_MUTATION, {
+    variables: values,
+    update(_, result) {
+      console.log(result)
+      values.body = ''
+    },
+  })
+
   return (
     <Form onSubmit={onSubmit}>
       <h2>Create a Post:</h2>
