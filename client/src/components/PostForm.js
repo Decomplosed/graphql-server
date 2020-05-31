@@ -49,7 +49,8 @@ const CREATE_POST_MUTATION = gql`
       username
       likes {
         id
-        usernamecreatedAt
+        username
+        createdAt
       }
       likeCount
       comments {
