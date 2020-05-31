@@ -15,6 +15,15 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
+const authLink = setContext(() => {
+  const token = localStorage.getItem('jwtToken')
+  return {
+    headers: {
+      Authorization: token ? `Bearer ${token}` : '',
+    },
+  }
+})
+
 export default (
   <ApolloProvider client={client}>
     <App />
