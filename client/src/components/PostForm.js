@@ -18,6 +18,10 @@ function PostForm() {
     },
   })
 
+  function createPostCallback() {
+    createPost()
+  }
+
   return (
     <Form onSubmit={onSubmit}>
       <h2>Create a Post:</h2>
