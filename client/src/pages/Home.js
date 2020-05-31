@@ -6,6 +6,7 @@ import { Grid } from 'semantic-ui-react'
 import { AuthContext } from '../context/auth'
 import PostCard from '../components/PostCard'
 import PostForm from '../components/PostForm'
+import { FETCH_POSTS_QUERY } from '../utils/graphql'
 
 function Home() {
   const { user } = useContext(AuthContext)
