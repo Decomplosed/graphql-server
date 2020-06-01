@@ -12,11 +12,25 @@ function LikeButton({ post: { id, likeCount, likes } }) {
     } else setLiked(false)
   }, [likes])
 
-  return (
-    <Button as='div' labelPosition='right' onClick={likePost}>
+  const likeButton = user ? (
+    liked ? (
+      <Button color='teal' filled>
+        <Icon name='heart' />
+      </Button>
+    ) : (
       <Button color='teal' basic>
         <Icon name='heart' />
       </Button>
+    )
+  ) : (
+    <Button as={Link} to='/login' color='teal' basic>
+      <Icon name='heart' />
+    </Button>
+  )
+
+  return (
+    <Button as='div' labelPosition='right' onClick={likePost}>
+      {likeButton}
       <Label basic color='teal' pointing='left'>
         {likeCount}
       </Label>
