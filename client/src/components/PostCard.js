@@ -49,6 +49,15 @@ function PostCard({
             {commentCount}
           </Label>
         </Button>
+        {user && user.username === username && (
+          <Button
+            as='div'
+            color='red'
+            onClick={() => console.log('Delete post')}
+          >
+            <Icon name='trash' />
+          </Button>
+        )}
       </Card.Content>
     </Card>
   )
