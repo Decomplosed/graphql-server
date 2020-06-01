@@ -11,10 +11,6 @@ function PostCard({
 }) {
   const { user } = useContext(AuthContext)
 
-  function likePost() {
-    console.log('Like post')
-  }
-
   function commentOnPost() {
     console.log('Comment post')
   }
