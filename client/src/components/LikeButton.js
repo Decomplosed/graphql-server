@@ -38,4 +38,17 @@ function LikeButton({ post: { id, likeCount, likes } }) {
   )
 }
 
+const LIKE_POST_MUTATION = gql`
+  mutation likePost($postId: ID!) {
+    likePost(postId: $postId) {
+      id
+      likes {
+        id
+        username
+      }
+      likeCount
+    }
+  }
+`
+
 export default LikeButton
