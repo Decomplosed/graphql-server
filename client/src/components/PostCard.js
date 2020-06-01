@@ -8,6 +8,8 @@ import { AuthContext } from '../context/auth'
 function PostCard({
   post: { id, body, createdAt, username, likeCount, commentCount, likes },
 }) {
+  const { user } = useContext(AuthContext)
+
   function likePost() {
     console.log('Like post')
   }
