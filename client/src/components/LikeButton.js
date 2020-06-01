@@ -10,7 +10,18 @@ function LikeButton({ post: { id, likeCount, likes } }) {
     if (user && likes.find((like) => like.username === user.username)) {
       setLiked(true)
     } else setLiked(false)
-  }, [user, likes])
+  }, [likes])
+
+  return (
+    <Button as='div' labelPosition='right' onClick={likePost}>
+      <Button color='teal' basic>
+        <Icon name='heart' />
+      </Button>
+      <Label basic color='teal' pointing='left'>
+        {likeCount}
+      </Label>
+    </Button>
+  )
 }
 
 export default LikeButton
