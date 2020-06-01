@@ -53,9 +53,10 @@ function PostCard({
           <Button
             as='div'
             color='red'
+            floated='right'
             onClick={() => console.log('Delete post')}
           >
-            <Icon name='trash' />
+            <Icon name='trash' style={{ margin: 0 }} />
           </Button>
         )}
       </Card.Content>
