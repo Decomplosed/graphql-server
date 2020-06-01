@@ -3,6 +3,8 @@ import { Card, Icon, Label, Image, Button } from 'semantic-ui-react'
 import moment from 'moment'
 import { Link } from 'react-router-dom'
 
+import { AuthContext } from '../context/auth'
+
 function PostCard({
   post: { id, body, createdAt, username, likeCount, commentCount, likes },
 }) {
