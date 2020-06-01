@@ -12,6 +12,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import MenuBar from './components/MenuBar'
+import SinglePost from './components/SinglePost'
 
 function App() {
   return (
