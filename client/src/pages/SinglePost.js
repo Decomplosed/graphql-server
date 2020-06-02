@@ -33,7 +33,11 @@ function SinglePost(props) {
     postMarkup = (
       <Grid>
         <Grid.Row>
-          <Image src='https://react.semantic-ui.com/images/avatar/large/elliot.jpg' />
+          <Image
+            size='small'
+            float='right'
+            src='https://react.semantic-ui.com/images/avatar/large/elliot.jpg'
+          />
         </Grid.Row>
       </Grid>
     )
