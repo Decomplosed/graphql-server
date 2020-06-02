@@ -5,6 +5,14 @@ import { useQuery } from '@apollo/react-hooks'
 function SinglePost(props) {
   const postId = props.match.params.postId
 
+  const {
+    data: { getPost },
+  } = useQuery(FETCH_POST_QUERY, {
+    variables: {
+      postId,
+    },
+  })
+
   let postMarkup
 }
 
