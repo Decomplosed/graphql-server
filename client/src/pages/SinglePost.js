@@ -29,6 +29,12 @@ function SinglePost(props) {
       likeCount,
       commentCount,
     } = getPost
+
+    postMarkup = (
+      <Grid>
+        <Grid.Row></Grid.Row>
+      </Grid>
+    )
   }
 }
 
