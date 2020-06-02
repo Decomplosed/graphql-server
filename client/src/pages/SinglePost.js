@@ -14,6 +14,10 @@ function SinglePost(props) {
   })
 
   let postMarkup
+
+  if (!getPost) {
+    postMarkup = <p>Loading post...</p>
+  }
 }
 
 const FETCH_POST_QUERY = gql`
