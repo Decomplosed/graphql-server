@@ -3,6 +3,8 @@ import gql from 'graphql-tag'
 
 function SinglePost(props) {
   const postId = props.match.params.postId
+
+  let postMarkup
 }
 
 const FETCH_POST_QUERY = gql`
