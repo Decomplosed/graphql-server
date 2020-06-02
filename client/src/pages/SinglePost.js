@@ -1,7 +1,7 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { useQuery } from '@apollo/react-hooks'
-import { Grid } from 'semantic-ui-react'
+import { Grid, Image } from 'semantic-ui-react'
 
 function SinglePost(props) {
   const postId = props.match.params.postId
