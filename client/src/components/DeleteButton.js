@@ -4,6 +4,8 @@ import { useMutation } from '@apollo/react-hooks'
 
 import { Button, Confirm, Icon } from 'semantic-ui-react'
 
+function DeleteButton(props) {
+  const [confirmOpen, setConfirmOpen] = useState(false)
 
   return (
     <Button
