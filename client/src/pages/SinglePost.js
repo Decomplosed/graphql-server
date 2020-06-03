@@ -55,7 +55,7 @@ function SinglePost(props) {
                 <LikeButton user={user} post={{ id, likeCount, likes }} />
                 <Button
                   as='div'
-                  lablPosition='right'
+                  labelPosition='right'
                   onClick={() => console.log('Comment on Post clicked')}
                 >
                   <Button basic color='blue'>
