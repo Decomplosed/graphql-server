@@ -37,8 +37,8 @@ function DeleteButton({ postId }) {
 }
 
 const DELETE_POST_MUTATAION = gql`
-  mutation deletePost($postId: ID!){
-    deletePost($postId: postId)
+  mutation deletePost($postId: ID!) {
+    deletePost(postId: $postId)
   }
 `
 
