@@ -53,7 +53,21 @@ function SinglePost(props) {
                 <Card.Description>{body}</Card.Description>
               </Card.Content>
               <hr />
-              <Card.Content extra></Card.Content>
+              <Card.Content extra>
+                <LikeButton user={user} post={{ id, likeCount, likes }} />
+                <Button
+                  as='div'
+                  lablPosition='right'
+                  onClick={() => console.log('Comment on Post clicked')}
+                >
+                  <Button basic color='blue'>
+                    <Icon name='comments' />
+                  </Button>
+                  <Label basic color='blue' pointing='left'>
+                    {commentCount}
+                  </Label>
+                </Button>
+              </Card.Content>
             </Card>
           </Grid.Column>
         </Grid.Row>
