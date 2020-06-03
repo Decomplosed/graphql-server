@@ -8,6 +8,7 @@ import { AuthContext } from '../context/auth'
 
 function SinglePost(props) {
   const postId = props.match.params.postId
+  const { user } = useContext(AuthContext)
 
   const {
     data: { getPost },
