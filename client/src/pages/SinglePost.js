@@ -41,6 +41,17 @@ function SinglePost(props) {
               src='https://react.semantic-ui.com/images/avatar/large/elliot.jpg'
             />
           </Grid.Column>
+          <Grid.Column>
+            <Card fluid>
+              <Card.Content>
+                <Card.Header>{username}</Card.Header>
+                <Card.Meta>{moment(createdAt).fromNow()}</Card.Meta>
+                <Card.Description>{body}</Card.Description>
+              </Card.Content>
+              <hr />
+              <Card.Content extra></Card.Content>
+            </Card>
+          </Grid.Column>
         </Grid.Row>
       </Grid>
     )
