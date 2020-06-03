@@ -5,6 +5,7 @@ import { Grid, Image, Card, Button } from 'semantic-ui-react'
 import moment from 'moment'
 
 import { AuthContext } from '../context/auth'
+import LikeButton from '../components/LikeButton'
 
 function SinglePost(props) {
   const postId = props.match.params.postId
