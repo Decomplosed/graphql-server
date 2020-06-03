@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/react-hooks'
 
 import { Button, Icon } from 'semantic-ui-react'
 
-function DeleteButton() {
+function DeleteButton(props) {
   return (
     <Button
       as='div'
