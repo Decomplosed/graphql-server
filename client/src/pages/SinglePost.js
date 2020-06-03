@@ -74,6 +74,7 @@ function SinglePost(props) {
       </Grid>
     )
   }
+  return postMarkup
 }
 
 const FETCH_POST_QUERY = gql`
