@@ -4,6 +4,8 @@ import { useQuery } from '@apollo/react-hooks'
 import { Grid, Image, Card } from 'semantic-ui-react'
 import moment from 'moment'
 
+import { AuthContext } from '../context/auth'
+
 function SinglePost(props) {
   const postId = props.match.params.postId
 
