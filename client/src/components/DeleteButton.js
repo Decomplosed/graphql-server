@@ -17,4 +17,10 @@ function DeleteButton(props) {
   )
 }
 
+const DELETE_POST_MUTATAION = gql`
+  mutation deletePost($postId: ID!){
+    deletePost($postId: postId)
+  }
+`
+
 export default DeleteButton
