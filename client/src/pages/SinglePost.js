@@ -11,9 +11,7 @@ function SinglePost(props) {
   const postId = props.match.params.postId
   const { user } = useContext(AuthContext)
 
-  const {
-    data: { getPost },
-  } = useQuery(FETCH_POST_QUERY, {
+  const { data: { getPost } = {} } = useQuery(FETCH_POST_QUERY, {
     variables: {
       postId,
     },
