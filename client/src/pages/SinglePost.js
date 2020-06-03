@@ -66,6 +66,9 @@ function SinglePost(props) {
                     {commentCount}
                   </Label>
                 </Button>
+                {user && user.username === username && (
+                  <DeleteButton postId={id} />
+                )}
               </Card.Content>
             </Card>
           </Grid.Column>
