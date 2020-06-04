@@ -16,6 +16,8 @@ function DeleteButton({ postId, callback }) {
         query: FETCH_POSTS_QUERY,
       })
 
+      data.getPosts = data.getPosts.filter((p) => p.id !== postId)
+
       if (callback) callback()
     },
     variables: {
