@@ -20,6 +20,16 @@ function SinglePost(props) {
     },
   })
 
+  const [submitComment] = useMutation(SUBMIT_COMMENT_MUTATION, {
+    update() {
+      setComment('')
+    },
+    variables: {
+      postId,
+      body: comment,
+    },
+  })
+
   function deletePostCallback() {
     props.history.push('/')
   }
