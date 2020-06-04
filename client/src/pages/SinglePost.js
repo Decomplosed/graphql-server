@@ -141,7 +141,7 @@ const SUBMIT_COMMENT_MUTATION = gql`
         id
         body
         createdAt
-        useContext
+        username
       }
       commentCount
     }
