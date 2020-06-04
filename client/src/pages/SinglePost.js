@@ -90,6 +90,25 @@ function SinglePost(props) {
             {user && (
               <Card fluid>
                 <p>Post a comment:</p>
+                <Form>
+                  <div className='ui action input fluid'>
+                    <input
+                      type='text'
+                      placeholder='Put a comment..'
+                      name='comment'
+                      value={comment}
+                      onChange={(event) => setComment(event.target.value)}
+                    />
+                    <button
+                      type='submit'
+                      className='ui button teal'
+                      disabled={comment.trim() === ''}
+                      onClick={submitComment}
+                    >
+                      Post!
+                    </button>
+                  </div>
+                </Form>
               </Card>
             )}
             {comments.map((comment) => (
