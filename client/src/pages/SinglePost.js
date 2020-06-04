@@ -12,6 +12,8 @@ function SinglePost(props) {
   const postId = props.match.params.postId
   const { user } = useContext(AuthContext)
 
+  const commentInputRef = useRef(null)
+
   const [comment, setComment] = useState('')
 
   const { data: { getPost } = {} } = useQuery(FETCH_POST_QUERY, {
@@ -99,6 +101,7 @@ function SinglePost(props) {
                         name='comment'
                         value={comment}
                         onChange={(event) => setComment(event.target.value)}
+                        ref={commentInputRef}
                       />
                       <button
                         type='submit'
