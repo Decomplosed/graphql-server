@@ -8,9 +8,9 @@ function DeleteButton({ postId, callback }) {
   const [confirmOpen, setConfirmOpen] = useState(false)
 
   const [deletePost] = useMutation(DELETE_POST_MUTATAION, {
-    update() {
+    update(proxy) {
       setConfirmOpen(false)
-      // TODO: remove post from cache
+
       if (callback) callback()
     },
     variables: {
