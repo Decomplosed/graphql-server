@@ -6,7 +6,7 @@ import { FETCH_POSTS_QUERY } from '../utils/graphql'
 
 import { Button, Confirm, Icon } from 'semantic-ui-react'
 
-function DeleteButton({ postId, callback }) {
+function DeleteButton({ postId, commentId, callback }) {
   const [confirmOpen, setConfirmOpen] = useState(false)
 
   const [deletePost] = useMutation(mutation, {
