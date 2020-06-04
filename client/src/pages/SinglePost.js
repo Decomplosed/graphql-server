@@ -95,6 +95,21 @@ function SinglePost(props) {
   return postMarkup
 }
 
+const SUBMIT_COMMENT_MUTATION = gql`
+  mutation($postId: ID!, $body: String!) {
+    createComment(postId: $postId, body: $body) {
+      id
+      comments {
+        id
+        body
+        createdAt
+        useContext
+      }
+      commentCount
+    }
+  }
+`
+
 const FETCH_POST_QUERY = gql`
   query($postId: ID!) {
     getPost(postId: $postId) {
