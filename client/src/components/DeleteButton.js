@@ -11,6 +11,7 @@ function DeleteButton({ postId, callback }) {
     update() {
       setConfirmOpen(false)
       // TODO: remove post from cache
+      if (callback) callback()
     },
     variables: {
       postId,
