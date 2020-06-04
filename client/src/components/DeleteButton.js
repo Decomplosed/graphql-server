@@ -51,4 +51,19 @@ const DELETE_POST_MUTATAION = gql`
   }
 `
 
+const DELETE_COMMENT_MUTATION = gql`
+  mutation deleteComment($postId: ID!, $commentId: ID!) {
+    deleteComment(postId: $postId, commentId: $commentId) {
+      id
+      comments {
+        id
+        username
+        createdAt
+        body
+      }
+      commentCount
+    }
+  }
+`
+
 export default DeleteButton
