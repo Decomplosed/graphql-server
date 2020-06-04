@@ -87,6 +87,11 @@ function SinglePost(props) {
                 )}
               </Card.Content>
             </Card>
+            {user && (
+              <Card fluid>
+                <p>Post a comment:</p>
+              </Card>
+            )}
             {comments.map((comment) => (
               <Card fluid key={comment.id}>
                 <Card.Content>
