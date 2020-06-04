@@ -78,9 +78,9 @@ function SinglePost(props) {
             {comments.map((comment) => (
               <Card fluid key={comment.id}>
                 <Card.Cotnent>
-                  <Card.Header>
-                    <Card.Meta>{moment(comment.createdAt).fromNow()}</Card.Meta>
-                  </Card.Header>
+                  <Card.Header>{comment.username}</Card.Header>
+                  <Card.Meta>{moment(comment.createdAt).fromNow()}</Card.Meta>
+                  <Card.Description>{comment.body}</Card.Description>
                 </Card.Cotnent>
               </Card>
             ))}
