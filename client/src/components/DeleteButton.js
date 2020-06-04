@@ -27,6 +27,7 @@ function DeleteButton({ postId, commentId, callback }) {
     },
     variables: {
       postId,
+      commentId,
     },
   })
 
