@@ -9,6 +9,8 @@ import { Button, Confirm, Icon } from 'semantic-ui-react'
 function DeleteButton({ postId, commentId, callback }) {
   const [confirmOpen, setConfirmOpen] = useState(false)
 
+  const mutation = commentId ? DELETE_COMMENT_MUTATION : DELETE_POST_MUTATAION
+
   const [deletePost] = useMutation(mutation, {
     update(proxy) {
       setConfirmOpen(false)
