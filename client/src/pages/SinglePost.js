@@ -18,6 +18,10 @@ function SinglePost(props) {
     },
   })
 
+  function deletePostCallback() {
+    props.history.push('/')
+  }
+
   let postMarkup
 
   if (!getPost) {
