@@ -19,8 +19,10 @@ function DeleteButton({ postId, commentId, callback }) {
           query: FETCH_POSTS_QUERY,
         })
 
-        data.getPosts = data.getPosts.filter((p) => p.id !== postId)
-        proxy.writeQuery({ query: FETCH_POSTS_QUERY, data })
+        proxy.writeQuery({
+          query: FETCH_POSTS_QUERY,
+          data: { getPosts: [...data.getPosts.filter((p) => p.id !== postId)] },
+        })
       }
 
       if (callback) callback()
