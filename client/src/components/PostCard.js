@@ -34,6 +34,7 @@ function PostCard({
         <LikeButton user={user} post={{ id, likes, likeCount }} />
         <Popup
           content='Comment on Post'
+          inverted
           trigger={
             <Button labelPosition='right' as={Link} to={`/posts/${id}`}>
               <Button color='blue' basic onClick={commentOnPost}>
