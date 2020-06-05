@@ -33,14 +33,20 @@ function DeleteButton({ postId, commentId, callback }) {
 
   return (
     <>
-      <Button
-        as='div'
-        color='red'
-        floated='right'
-        onClick={() => setConfirmOpen(true)}
-      >
-        <Icon name='trash' style={{ margin: 0 }} />
-      </Button>
+      <Popup
+        content='Delete Post'
+        inverted
+        trigger={
+          <Button
+            as='div'
+            color='red'
+            floated='right'
+            onClick={() => setConfirmOpen(true)}
+          >
+            <Icon name='trash' style={{ margin: 0 }} />
+          </Button>
+        }
+      />
       <Confirm
         open={confirmOpen}
         onCancel={() => setConfirmOpen(false)}
